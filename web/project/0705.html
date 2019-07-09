@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style type="text/css">
+        li {
+            list-style: none;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        /*
+                * {
+                    border: 1px solid black;
+                }*/
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+        }
+
+        header {
+
+            background-color: white;
+
+        }
+
+        @media only screen and (max-width: 769px) {
+            header {
+                width: 100%;
+            }
+        }
+
+        header .header {
+            text-align: center;
+            width: 60%;
+            margin: 0 auto;
+            background-color: white;
+
+
+        }
+
+        header .sign {
+            background-color: white;
+            text-align: right;
+            width: 60%;
+            margin: 0 auto;
+            padding-right: 2%;
+            padding-top: 1%;
+        }
+
+
+        @media only screen and (max-width: 769px) {
+            #signUp, #signIn {
+                width: 60px;
+                font-size: 10px;
+            }
+        }
+
+        .header img {
+            width: 450px;
+        }
+
+        @media only screen and (max-width: 769px) {
+            .header img {
+                width: 200px;
+            }
+        }
+
+        header .header p {
+            font-size: 20px;
+            font-weight: bold;
+            padding-top: 5px;
+            background-color: white;
+        }
+
+        .header .main_search {
+            position: relative;
+            margin: 0 auto;
+            height: 50px;
+            width: 80%;
+            border: 1px solid #fee140;
+            border-radius: 50px;
+            background-color: white;
+            padding: 10px;
+
+        }
+
+        @media only screen and (max-width: 769px) {
+            .header .main_search {
+                width: 80%;
+                height: 30px;
+            }
+        }
+
+        .header .main_search #main_search {
+            border: 0;
+            width: 600px;
+            float: left;
+            font-size: 0.813rem;
+            padding-left: 30px;
+        }
+
+        @media only screen and (max-width: 769px) {
+            .header .main_search #main_search {
+                width: 300px;
+                height: 30px;
+                font-size: 0.813rem;
+            }
+        }
+
+        .header .main_search #search_btn {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -1px;
+            width: 110px;
+            height: 100%;
+        }
+
+
+        .btn {
+            background-color: #fee140;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            border-radius: 50px;
+            border-style: none;
+        }
+
+
+        #wrap {
+            overflow: auto;
+            margin: 10px auto;
+            width: 60%;
+
+
+        }
+
+        @media only screen and (max-width: 769px) {
+            #wrap {
+                width: 100%;
+
+            }
+        }
+
+        .left, .right, .bottom {
+            float: left;
+            height: 100%;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .left {
+            width: 60%;
+            margin-right: 3%;
+        }
+
+        .right {
+            width: 37%;
+        }
+
+        .right ul li {
+            margin: 0 auto;
+            width: 80%;
+            font-size: 23.5px;
+        }
+
+        @media only screen and (max-width: 769px) {
+            .left, .right, .bottom {
+                width: 100%;
+                margin-bottom: 3%;
+            }
+        }
+
+        .bx-pager bx-default-pager {
+            width: 100%;
+            height: 100%;
+        }
+
+        .right ul li {
+            text-align: left;
+        }
+
+        .bottom {
+            margin-top: 3%;
+            width: 100%;
+            height: 500px;
+        }
+
+        .content {
+            float: left;
+            width: 30%;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fee140;
+            clear: left;
+            font-size: 25px;
+        }
+
+        /*
+                footer ul, strong {
+                    background-color: #fee140;
+                }*/
+
+        footer ul {
+            padding: 10px 0;
+        }
+
+        footer ul li {
+            margin: 0 auto;
+            width: 60%;
+            background-color: #fee140;
+        }
+
+        @media only screen and (max-width: 769px) {
+            footer ul li {
+                width: 100%;
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var main = $('.bxslider').bxSlider({
+                auto: true,	//자동으로 슬라이드
+                controls: true,	//좌우 화살표
+                autoControls: true,	//stop,play
+                pager: false,	//페이징
+                pause: 3000,
+                autoDelay: 0,
+                slideWidth: 250, //이미지 박스 크기설정
+                speed: 500,
+                startAutoOnclick: true,
+                stopAutoOnclick: true,
+                minSlides: 1,
+                maxSlides: 3,
+                slideMargin: 10,
+                moveSlides: 1,
+                reloadSlider: true,
+                responsive: true
+
+            });
+
+
+            $(".bx-stop").click(function () {	// 중지버튼 눌렀을때
+                main.stopAuto();
+                $(".bx-stop").hide();
+                $(".bx-start").show();
+                return false;
+            });
+
+            $(".bx-start").click(function () {	//시작버튼 눌렀을때
+                main.startAuto();
+                $(".bx-start").hide();
+                $(".bx-stop").show();
+                return false;
+            });
+
+            $(".bx-start").hide();	//onload시 시작버튼 숨김.
+        });
+
+    </script>
+</head>
+<body>
+<header>
+    <div class="sign">
+        <button id="signUp" class="btn">SignUp</button>
+        <button id="signIn" class="btn">SignIn</button>
+    </div>
+    <div class="header">
+        <a href="#"> <img src="images/momasil_logo.png"/></a>
+        <p>모마실래?</p>
+        <fieldset class="main_search">
+            <input id="main_search" type="text" placeholder="음료명, 재료 또는 브랜드">
+            <input id="search_btn" class="btn" type="submit" value="검색">
+        </fieldset>
+    </div>
+</header>
+<div id="wrap">
+    <div class="left">
+        <h3>신메뉴</h3>
+        <div class="bxslider">
+            <div class="slide"><a href="#"><img src="images/신메뉴1.PNG"/></a></div>
+            <div class="slide"><a href="#"><img src="images/신메뉴2.PNG"/></a></div>
+            <div class="slide"><a href="#"><img src="images/신메뉴3.PNG"/></a></div>
+            <!--            <li><a href="#"><img src="images/신메뉴4.PNG"/></a></li>-->
+            <div class="slide"><a href="#"><img src="images/신메뉴5.PNG"/></a></div>
+            <div class="slide"><a href="#"><img src="images/신메뉴6.PNG"/></a></div>
+        </div>
+    </div>
+    <div class="right">
+        <h3>인기 음료</h3>
+        <ul>
+            <li>1.</li>
+            <li>2.</li>
+            <li>3.</li>
+            <li>4.</li>
+            <li>5.</li>
+            <li>6.</li>
+            <li>7.</li>
+            <li>8.</li>
+            <li>9.</li>
+            <li>10.</li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <h3>이벤트</h3>
+        <div class="content">1</div>
+        <div class="content">2</div>
+        <div class="content">3</div>
+        <div class="content">4</div>
+    </div>
+</div>
+<footer>
+    <ul>
+        <li><strong>Momasil</strong> (개발자: 기원영, 박천국, 이정훈, 최은영)</li>
+        <li><strong>고객센터 / 광고문의 </strong>: 010-0000-0000 | <strong>이메일</strong> : cs@momasil.com</li>
+        <li>copyright &copy;1jo. All Rights Reserved</li>
+    </ul>
+</footer>
+</body>
+</html>
