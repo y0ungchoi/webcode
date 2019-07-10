@@ -19,6 +19,27 @@ $(document).ready(function () {
 
     });
 
+    var second = $('.bxslider2').bxSlider({
+     //   auto: true,	//자동으로 슬라이드
+        controls: false,	//좌우 화살표
+     //   autoControls: true,	//stop,play
+        pager: true,	//페이징
+     //   pause: 3000,
+     //   autoDelay: 0,
+        slideWidth: 500, //이미지 박스 크기설정
+     //   speed: 500,
+     //   startAutoOnclick: true,
+     //   stopAutoOnclick: true,
+        minSlides: 1,
+        maxSlides: 2,
+        slideMargin: 20,
+        moveSlides: 3,
+        reloadSlider: true,
+        responsive: true,
+        captions: true
+
+    });
+
     $(".bx-stop").click(function () {	// 중지버튼 눌렀을때
         main.stopAuto();
         $(".bx-stop").hide();
@@ -34,5 +55,12 @@ $(document).ready(function () {
     });
 
     $(".bx-start").hide();	//onload시 시작버튼 숨김.
+
+    // $('.event').hover(function () {
+    //     $('event').c
+    // }, function () {
+    //     alert("Bye");
+    //
+    // });
 
 });
