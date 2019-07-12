@@ -243,25 +243,20 @@ public class ReviewDao {
 		return rst;
 	}
 // 메인페이지 랭킹	
-	public ArrayList mainrank() {
+	public ArrayList mainrank(int a) {
 		ArrayList rst = new ArrayList();
 		getconnectDB();
-		String sql = "SELECT id, name, salary, designation FROM TBLEMP";
+		String sql = "select avg(prod_rating)  from review where 제품번호 =?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
-			while (rs.next()) {
-				EmpVo temp = new EmpVo();
-				temp.setId(rs.getInt("id"));
-				temp.setName(rs.getString("name"));
-				temp.setSalary(rs.getInt("salary"));
-				temp.setDesignation(rs.getString("designation"));
-				rst.add(temp);
+			while(rs.next()) {
+				rst = rs.getInt(1);
 			}
-			System.out.println("selectEmp 쿼리성공");
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 		DBClose();
 		return rst;
 	}
