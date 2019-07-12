@@ -8,8 +8,6 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="JAX-WS-Apache Axis" />
-          <element id="library" level="project" name="mysql-connector-java-5.1.29-bin" />
-          <element id="library" level="project" name="tomcat-jdbc" />
         </element>
       </element>
       <element id="library" level="application" name="@types/jquery" />
