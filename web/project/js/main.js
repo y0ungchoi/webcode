@@ -2,6 +2,7 @@ $(document)
 		.ready(
 				function() {
 
+					$("#list").css('color', 'red');				
 					var clockTarget = document.getElementById("clock");
 
 					function clock() {
@@ -84,9 +85,10 @@ $(document)
 
 					$('#roll_list').vTicker({
 						margin : 10,
-						speed: 1000,
-						pause: 1000
+						speed : 1000,
+						pause : 1000
 					});
+					
 					$('#pause').click(function() {
 						$this = $(this);
 						if ($this.text() == 'Pause') {
